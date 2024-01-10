@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace console_chess.BoardElements
 {
-    internal class BoardException
+    internal class BoardException : Exception
     {
+        public BoardException(string msg) : base(msg) { }
     }
 }
