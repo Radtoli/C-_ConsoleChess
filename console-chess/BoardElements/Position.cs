@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace console_chess.Board
+namespace console_chess.BoardElements
 {
     internal class Position
     {
