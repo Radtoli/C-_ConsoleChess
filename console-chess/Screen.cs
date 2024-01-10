@@ -21,7 +21,7 @@ namespace console_chess
                         Console.Write("- ");
                     }
                     else { 
-                    Console.WriteLine(board.piece(i, j) + "");
+                    Console.Write(board.piece(i, j) + "");
                     }
                     
                 }

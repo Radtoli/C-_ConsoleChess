@@ -25,5 +25,11 @@ namespace console_chess.BoardElements
             return pieces[row, col];
         }
 
+        public void putPiece(Piece p, Position pos)
+        {
+            pieces[pos.row, pos.column] = p;
+            p.position = pos;
+        }
+
     }
 }
