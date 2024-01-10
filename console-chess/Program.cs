@@ -8,13 +8,13 @@ namespace console_chess
         static void Main(string[] args)
         {
 
-            Board board = new Board(8,8);
+            Board board = new Board(8, 8);
 
-            Position P;
 
-            P = new Position(3, 4);
 
-            Console.WriteLine("Position:" + P);
+            Screen.printBoard(board);
+
+
         }
     }
-} 
+}
