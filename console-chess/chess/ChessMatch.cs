@@ -24,7 +24,10 @@ namespace console_chess.chess
         private void putPieces()
         {
             board.putPiece(new Rook(board, Color.White), new ChessPosition('a', 1).toPosition());
-            
+            board.putPiece(new King(board, Color.White), new ChessPosition('d', 1).toPosition());
+            board.putPiece(new King(board, Color.Black), new ChessPosition('d', 8).toPosition());
+            board.putPiece(new Rook(board, Color.Black), new ChessPosition('a', 8).toPosition());
+
         }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace console_chess.BoardElements
 {
-    internal class Piece
+    abstract class Piece
     {
         public Position position { get; set; }
         public Color color { get; protected set; }
@@ -25,5 +25,8 @@ namespace console_chess.BoardElements
         {
             moveAmount++;
         }
+
+        public abstract bool[,] possibleMovements();
+        
     }
 }
