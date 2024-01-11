@@ -5,10 +5,10 @@ namespace console_chess.chess
     internal class ChessPosition
     {
         public char column {  get; set; }
-        public char row { get; set; }
+        public int row { get; set; }
 
 
-        public ChessPosition(char column, char row)
+        public ChessPosition(char column, int row)
         {
             this.column = column;
             this.row = row;
@@ -21,7 +21,7 @@ namespace console_chess.chess
 
         public Position toPosition()
         {
-            return new Position(8 - column, row - 'a');
+            return new Position(8 - row, column - 'a');
         }
 
 

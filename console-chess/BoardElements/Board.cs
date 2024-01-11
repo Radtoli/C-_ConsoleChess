@@ -46,6 +46,20 @@ namespace console_chess.BoardElements
             p.position = pos;
         }
 
+        public Piece takePiece(Position pos)
+        {
+            if (piece(pos) == null)
+            {
+                return null;
+            }
+
+            Piece aux = piece(pos);
+            aux.position = null;
+            pieces[pos.row, pos.column] = null;
+
+            return aux;
+        }
+
 
         public bool validPosition(Position pos)
         {

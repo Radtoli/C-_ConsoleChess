@@ -20,5 +20,10 @@ namespace console_chess.BoardElements
             this.color = color;
             this.moveAmount = 0;
         }
+
+        public void increaseMovementAmount()
+        {
+            moveAmount++;
+        }
     }
 }
