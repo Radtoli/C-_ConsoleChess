@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using console_chess.BoardElements;
+using console_chess.chess;
 
 namespace console_chess
 {
@@ -34,6 +35,16 @@ namespace console_chess
             }
             Console.WriteLine("  a b c d e f g h");
         }
+
+        public static ChessPosition readChessPosition()
+        {
+            string s = Console.ReadLine();
+            char column = s[0];
+            int row = int.Parse(s[1] + "");
+            return new ChessPosition(column, row);
+             
+        }
+
         public static void printPiece(Piece piece)
         {
             if(piece.color == Color.White)

@@ -6,9 +6,10 @@ namespace console_chess.chess
     internal class ChessMatch
     {
 
-        public Board board { get; set; }
+        public Board board { get; private set; }
         private int turn;
         private Color currentPlayer;
+        public bool finished { get; private set; }
 
 
         public ChessMatch()
@@ -17,11 +18,12 @@ namespace console_chess.chess
             turn = 1;
             currentPlayer = Color.White;
             putPieces();
+            finished = false;
         }
 
         private void putPieces()
         {
-            board.putPiece(new Rook(board, Color.Black), new ChessPosition('a', 1).toPosition());
+            board.putPiece(new Rook(board, Color.White), new ChessPosition('a', 1).toPosition());
             
         }
 

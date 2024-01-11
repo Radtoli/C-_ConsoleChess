@@ -7,11 +7,27 @@ internal class Program
     static void Main(string[] args)
     {
 
-        try { 
+        try 
+        { 
        
         ChessMatch match = new ChessMatch();
 
-            Screen.printBoard(match.board);
+            while (!match.finished)
+            {
+                Console.Clear();
+                Screen.printBoard(match.board);
+
+
+                Console.WriteLine();
+                Console.WriteLine("Origin: ");
+                Position origin = Screen.readChessPosition().toPosition();
+                Console.WriteLine("Destiny: ");
+                Position destiny = Screen.readChessPosition().toPosition();
+
+
+                match.makeMovement(origin, destiny);
+            }
+           
         }
         catch (BoardException e)
         {
